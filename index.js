@@ -94,7 +94,18 @@
 //  */
 
 
-let number = prompt("Введіть число більше 100") ;
-while (number < 100 && number !== null) {
-  number = prompt("Введіть число більше 100")
-}
+// let number = prompt("Введіть число більше 100") ;
+// while (number < 100 && number !== null) {
+//   number = prompt("Введіть число більше 100")
+// }
+/**
+ *?  Записать массив, const arr = ['BEST', 'the', 'foo', 'is',  'JS' ]
+ *? развернуть массив, метод reverse 
+ *? вырезать foo,
+ *? перевести его в строку разделенную пробелами
+ */
+const arr = ['BEST', 'the', 'foo', 'is', 'JS']
+const newArrey = arr.slice(0);
+newArrey.splice(newArrey.indexOf('foo'), 1);
+newArrey.reverse();
+console.log(newArrey.join(" "));
