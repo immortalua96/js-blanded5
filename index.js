@@ -75,11 +75,26 @@
  *! а не произвольный набор символов, не нужно.
  */
 
-let total = 0;
-let number;
+// let total = 0;
+// let number;
 
-do {
-  number = prompt("enter num");
-  total += Number(number);
-} while (number !== null);
-alert(`загальна сума ${total}`);
+// do {
+//   number = prompt("enter num");
+//   total += Number(number);
+// } while (number !== null);
+// alert(`загальна сума ${total}`);
+
+//  *? Напишите цикл, который предлагает ввести
+//  *? число больше 100 через prompt.
+//  *? Если посетитель ввёл другое число - попросить
+//  *? ввести ещё раз и так далее.
+//  *? Цикл должен спрашивать число, пока посетитель не
+//  *? введёт число больше 100, либо не нажмет кнопку
+//  *? Отмена в prompt
+//  */
+
+
+let number = prompt("Введіть число більше 100") ;
+while (number < 100 && number !== null) {
+  number = prompt("Введіть число більше 100")
+}
