@@ -221,18 +221,45 @@
  *? Результат вивести у консоль.
  *? Очікуваний результат ["Умань", "Харків", "Одеса"]
  */
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2023-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2023-07-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2023-07-10"),
-};
-function sortConcenrt(obj) {
- return Object.keys(obj).filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] ).map(item => `${item} : ${obj[item]}`)
-  // const newCity = arrayCity.filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] )
-}
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2023-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2023-07-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2023-07-10"),
+// };
+// function sortConcenrt(obj) {
+//  return Object.keys(obj).filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] ).map(item => `${item} : ${obj[item]}`)
+//   // const newCity = arrayCity.filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] )
+// }
 
+// console.log(sortConcenrt(concerts))
+//TODO:==============================================
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
-console.log(sortConcenrt(concerts))
+ */
+const tweets = [
+  { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+  { id: '001', likes: 2, tags: ['html', 'css'] },
+  { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+  { id: '003', likes: 8, tags: ['css', 'react'] },
+  { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+];
+
+const newArray = tweets.flatMap(tweet => tweet.tags);
+const all = newArray.reduce(
+  (acc, tag) => {
+    if (!acc.hasOwnProperty(tag)) {
+      acc[tag] = 0;
+    }
+    acc[tag] += 1;
+
+    return acc;
+  },
+
+  {}
+);
+console.log(all);
