@@ -166,18 +166,34 @@
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
 
-const stones = [
-  { name: "Изумруд", price: 1300, quantity: 4 },
-  { name: "Бриллиант", price: 2700, quantity: 6 },
-  { name: "Сапфир", price: 400, quantity: 7 },
-  { name: "Щебень", price: 150, quantity: 100 },
-];
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
 
-const calcTotalPrice = (arr, stonesName) => {
-  for (const elem of arr) {
-    if (elem.name === stonesName) {
-      return elem.price * elem.quantity;
-    }
-  }
-};
-console.log(calcTotalPrice(stones, "Бриллиант"));
+// const calcTotalPrice = (arr, stonesName) => {
+//   for (const elem of arr) {
+//     if (elem.name === stonesName) {
+//       return elem.price * elem.quantity;
+//     }
+//   }
+// };
+// console.log(calcTotalPrice(stones, "Бриллиант"));
+
+/**
+ *? Напишіть функцію updateObject, яка приймає об'єкт та повертає
+ *? новий об'єкт без вказаного параметра
+ *? Очікуваний результат updateObject({a: 1, b: 2, c: 3}, 'b') => {a: 1, c: 3}
+ *? https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
+ */
+
+const obj = { a: 1, b: 2, c: 3 };
+
+function updateObject(obj, key) {
+  delete obj[key];
+  return obj;
+}
+
+console.log(updateObject(obj, 'b'));
