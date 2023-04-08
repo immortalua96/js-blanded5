@@ -189,11 +189,27 @@
  *? https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
  */
 
-const obj = { a: 1, b: 2, c: 3 };
+// const obj = { a: 1, b: 2, c: 3 };
 
-function updateObject(obj, key) {
-  delete obj[key];
-  return obj;
+// function updateObject(obj, key) {
+//   delete obj[key];
+//   return obj;
+// }
+
+// console.log(updateObject(obj, 'b'));
+
+///**
+// *? Зробіть знижку 20% на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+function discount(arr) {
+    const newFruits = arr.map((fruit, index) => { return { ...fruit, price: fruit.price * 0.8, id:index+1} })
+    return newFruits
 }
-
-console.log(updateObject(obj, 'b'));
+discount(fruits)
