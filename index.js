@@ -93,19 +93,46 @@
 //  *? Отмена в prompt
 //  */
 
-
 // let number = prompt("Введіть число більше 100") ;
 // while (number < 100 && number !== null) {
 //   number = prompt("Введіть число більше 100")
 // }
 /**
  *?  Записать массив, const arr = ['BEST', 'the', 'foo', 'is',  'JS' ]
- *? развернуть массив, метод reverse 
+ *? развернуть массив, метод reverse
  *? вырезать foo,
  *? перевести его в строку разделенную пробелами
  */
-const arr = ['BEST', 'the', 'foo', 'is', 'JS']
-const newArrey = arr.slice(0);
-newArrey.splice(newArrey.indexOf('foo'), 1);
-newArrey.reverse();
-console.log(newArrey.join(" "));
+// const arr = ['BEST', 'the', 'foo', 'is', 'JS']
+// const newArrey = arr.slice(0);
+// newArrey.splice(newArrey.indexOf('foo'), 1);
+// newArrey.reverse();
+// console.log(newArrey.join(" "));
+
+///
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення
+ *? використовуючи Object.keys() і for...of
+ */
+
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
+};
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
+
+const allKey = Object.keys(user);
+
+for (const elem of allKey) {
+  console.log(`${elem}: ${user[elem]}`);
+}
