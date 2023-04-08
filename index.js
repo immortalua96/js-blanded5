@@ -121,18 +121,39 @@
  *? використовуючи Object.keys() і for...of
  */
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
-};
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
 
-const allKey = Object.keys(user);
+// const allKey = Object.keys(user);
 
-for (const elem of allKey) {
-  console.log(`${elem}: ${user[elem]}`);
-}
+// for (const elem of allKey) {
+//   console.log(`${elem}: ${user[elem]}`);
+// }
+
+//TODO:=======================
+//У нас є об'єкт, у якому зберігатимуться зарплати
+//нашої команди
+//Напишіть функцію, яка приймає один параметр(об'єкт) і повертає загальну сумму зарплати.
+//Якщо об'єкт salaries порожній, то результат має бути 0
+
+// const salaries = {
+//   Mango: 100,
+//   Poly: 160,
+//   Ajax: 1470,
+// };
+// function allSellery (obj){
+//   let totalSalery = 0 
+//   const array = Object.values(obj)
+//   for (let value of array) {
+//     totalSalery += value
+//   }
+//   return totalSalery 
+// }
+// console.log(allSellery(salaries))
