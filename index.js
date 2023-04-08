@@ -203,13 +203,36 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
-function discount(arr) {
-    const newFruits = arr.map((fruit, index) => { return { ...fruit, price: fruit.price * 0.8, id:index+1} })
-    return newFruits
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+// function discount(arr) {
+//     const newFruits = arr.map((fruit, index) => { return { ...fruit, price: fruit.price * 0.8, id:index+1} })
+//     return newFruits
+// }
+// discount(fruits)
+/**
+ *? З об'єкту concerts потрібно отримати масив
+ *? в якому будуть лише імена міст.
+ *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+ *? відсортувати їх у хронологічному порядку.
+ *? Результат вивести у консоль.
+ *? Очікуваний результат ["Умань", "Харків", "Одеса"]
+ */
+const concerts = {
+  Київ: new Date("2020-04-01"),
+  Умань: new Date("2023-07-02"),
+  Вінниця: new Date("2020-04-21"),
+  Одеса: new Date("2023-07-15"),
+  Хмельницький: new Date("2020-04-18"),
+  Харків: new Date("2023-07-10"),
+};
+function sortConcenrt(obj) {
+ return Object.keys(obj).filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] ).map(item => `${item} : ${obj[item]}`)
+  // const newCity = arrayCity.filter(el => obj[el] > new Date()).sort((a, b) => obj[a]-obj[b] )
 }
-discount(fruits)
+
+
+console.log(sortConcenrt(concerts))
