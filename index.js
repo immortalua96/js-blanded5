@@ -149,11 +149,35 @@
 //   Ajax: 1470,
 // };
 // function allSellery (obj){
-//   let totalSalery = 0 
+//   let totalSalery = 0
 //   const array = Object.values(obj)
 //   for (let value of array) {
 //     totalSalery += value
 //   }
-//   return totalSalery 
+//   return totalSalery
 // }
 // console.log(allSellery(salaries))
+
+/**
+ *? Напишіть ф-цію calcTotalPrice(stones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 6 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 150, quantity: 100 },
+];
+
+const calcTotalPrice = (arr, stonesName) => {
+  for (const elem of arr) {
+    if (elem.name === stonesName) {
+      return elem.price * elem.quantity;
+    }
+  }
+};
+console.log(calcTotalPrice(stones, "Бриллиант"));
