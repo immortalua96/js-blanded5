@@ -388,3 +388,26 @@
 //   console.log(`Hi ${name}`)
 // }
 // letMeSeeYourName(greet)
+
+// Напиши функцію конструктор User для створення користувача з такими властивостями
+//a. userName - ім'я, рядок
+//b. age - вік, число
+//c. numbersOfPost - кількість постів, число
+//d. функція очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+//Додай метод getInfo(), який повертає рядок:
+//`Користувачеві ${} ${} років і в нього ${} публікацій.`
+
+const User = function (userObj) {
+    this.userName = userObj.userName;
+    this.age = userObj.age;
+    this.numbersOfPost = userObj.numbersOfPost;
+};
+User.prototype.getInfo = function (){
+    console.log(`Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`);
+}
+const user = new User({userName: "Roman", age: 25, numbersOfPost: 50})
+console.log(user);
+user.getInfo(
+    
+)
