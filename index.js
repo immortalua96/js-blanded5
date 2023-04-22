@@ -398,16 +398,50 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
-const User = function (userObj) {
-    this.userName = userObj.userName;
-    this.age = userObj.age;
-    this.numbersOfPost = userObj.numbersOfPost;
-};
-User.prototype.getInfo = function (){
-    console.log(`Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`);
-}
-const user = new User({userName: "Roman", age: 25, numbersOfPost: 50})
-console.log(user);
-user.getInfo(
+// const User = function (userObj) {
+//     this.userName = userObj.userName;
+//     this.age = userObj.age;
+//     this.numbersOfPost = userObj.numbersOfPost;
+// };
+// User.prototype.getInfo = function (){
+//     console.log(`Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`);
+// }
+// const user = new User({userName: "Roman", age: 25, numbersOfPost: 50})
+// console.log(user);
+// user.getInfo(
     
-)
+// )
+
+
+// Напиши функцію конструктор Storage, який створює об'єкти
+//Для управління складом товарів.
+//При виклику отримуватиме один агрумент - початковий масив товарів,
+//і записувати їх у властивість items.
+//Додай методи класу:
+//getItems() - повертайте масив товарів
+//addItems(item) - отримує новий товар та додає його до поточних
+//removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
+//++++++++++++++++++++++++++++++++++++++++++
+const Storage = function (arr) {
+  this.arr = arr
+}
+Storage.prototype.getItems = function () {
+  return this.arr
+}
+Storage.prototype.addItems = function (item) {
+  this.arr.push(item)
+}
+Storage.prototype.removeItem = function(item) {
+  const indexRemove = this.arr.indexOf(item)
+  if (indexRemove === -1) {
+    alert(`такого ${item} не має`)
+    return 
+  }
+  this.arr.splice(indexRemove,1)
+}
+
+const storage = new Storage(["apple", "mango"]);
+console.log(storage);
+storage.addItems("banana")
+storage.removeItem("apple")
+console.log(storage)
