@@ -371,3 +371,20 @@
 // const showProduct = product => console.log(product);
 
 // makeProduct('box', 200, showProduct);
+
+// letMeSeeYourName(callback) - запитує ім'я користувача
+//через prompt та викликає callback функцію
+//greet(name) - коллбек, що приймає ім'я і логірує в консоль
+//Рядок "Привіт <name>"
+//Реалізуй перевірку, що prompt не порожній
+// const letMeSeeYourName = (callback) => {
+//   const name = prompt('ведіть ім\'я')
+//   if (!name.trim()) {
+//    return alert('Givme you name')
+//   }
+//   callback(name)
+// };
+// function greet(name) {
+//   console.log(`Hi ${name}`)
+// }
+// letMeSeeYourName(greet)
