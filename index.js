@@ -337,19 +337,36 @@
 // Так ми знайдемо всіх студентів із відмітками понад 50.
 // Нарешті ми використовували функцію reduce() для повертаного функцією filter()
 // масиву студентів, щоб повернути суму оцінок.
-let studentRecords = [
-  { name: "John", id: 123, marks: 98 },
-  { name: "Baba", id: 101, marks: 23 },
-  { name: "yaga", id: 200, marks: 45 },
-  { name: "Wick", id: 115, marks: 75 },
-];
-const result = studentRecords.map(student => {
-    if (student.marks < 50) {
-    student.marks += 15
-    }
-return student;
-})
-.filter(({marks}) => marks > 50)
-.reduce((prevMark, {marks}) => prevMark + marks, 0)
+// let studentRecords = [
+//   { name: "John", id: 123, marks: 98 },
+//   { name: "Baba", id: 101, marks: 23 },
+//   { name: "yaga", id: 200, marks: 45 },
+//   { name: "Wick", id: 115, marks: 75 },
+// ];
+// const result = studentRecords.map(student => {
+//     if (student.marks < 50) {
+//     student.marks += 15
+//     }
+// return student;
+// })
+// .filter(({marks}) => marks > 50)
+// .reduce((prevMark, {marks}) => prevMark + marks, 0)
 
-console.log(result);
+// console.log(result);
+
+// letMeSeeYourName(callback) - запитує ім'я користувача
+//через prompt та викликає callback функцію
+//greet(name) - коллбек, що приймає ім'я і логірує в консоль
+//Рядок "Привіт <name>"
+//Реалізуй перевірку, що prompt не порожній
+// const letMeSeeYourName = (callback) => {
+//   const name = prompt('ведіть ім\'я')
+//   if (!name.trim()) {
+//    return alert('Givme you name')
+//   }
+//   callback(name)
+// };
+// function greet(name) {
+//   console.log(`Hi ${name}`) 
+// }
+// letMeSeeYourName(greet)
