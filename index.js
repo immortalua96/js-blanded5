@@ -354,6 +354,24 @@
 
 // console.log(result);
 
+// 2. Напишіть дві функції
+//makeProduct(name, price, callback) - приймає
+//ім'я та ціну товару, а також callback.
+//Функція створює об'єкт товару, додаючи йому унікальний
+//ідентифікатор як id і викликає callback
+//Передаючи йому створений об'єкт.
+//showProduct(product) - коллбек приймаючий об'єкт
+//продукту і логірующий їх у консоль
+//++++++++++++++++++++++++++++++++++++++++++++
+
+// const makeProduct = (name, price, callback) => {
+//   const newObject = { name, price, id: Date.now() };
+//   callback(newObject);
+// };
+// const showProduct = product => console.log(product);
+
+// makeProduct('box', 200, showProduct);
+
 // letMeSeeYourName(callback) - запитує ім'я користувача
 //через prompt та викликає callback функцію
 //greet(name) - коллбек, що приймає ім'я і логірує в консоль
@@ -367,6 +385,6 @@
 //   callback(name)
 // };
 // function greet(name) {
-//   console.log(`Hi ${name}`) 
+//   console.log(`Hi ${name}`)
 // }
 // letMeSeeYourName(greet)
