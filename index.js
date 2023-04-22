@@ -241,7 +241,7 @@
 *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
  */
-// 
+//
 // const arr = [
 //   { name: "Albert", surname: "Einstein", born: 1879, dead: 1955, id: 1 },
 //   { name: "Isaac", surname: "Newton", born: 1643, dead: 1727, id: 2 },
@@ -277,7 +277,21 @@
 //   { name: "yaga", id: 200, marks: 45 },
 //   { name: "Wick", id: 115, marks: 75 },
 // ];
-// const newArrey = studentRecords.map(el => 
+// const newArrey = studentRecords.map(el =>
 //   el.name.toUpperCase()
 // )
 // console.log(newArrey)
+// 2 (filter()) Припустимо, що ми маємо той самий набір даних, що й вище, але цього разу ми хочемо
+// отримати детальну інформацію про студентів, які набрали більше 50 балів.
+// let studentRecords = [
+//   { name: 'John', id: 123, marks: 98 },
+//   { name: 'Baba', id: 101, marks: 23 },
+//   { name: 'yaga', id: 200, marks: 45 },
+//   { name: 'Wick', id: 115, marks: 75 },
+// ];
+
+// const newArrey = studentRecords.filter(item => {
+//   const { marks } = item;
+//   return marks > 90;
+// });
+// console.log(newArrey);
