@@ -409,9 +409,8 @@
 // const user = new User({userName: "Roman", age: 25, numbersOfPost: 50})
 // console.log(user);
 // user.getInfo(
-    
-// )
 
+// )
 
 // Напиши функцію конструктор Storage, який створює об'єкти
 //Для управління складом товарів.
@@ -422,26 +421,55 @@
 //addItems(item) - отримує новий товар та додає його до поточних
 //removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
 //++++++++++++++++++++++++++++++++++++++++++
-const Storage = function (arr) {
-  this.arr = arr
-}
-Storage.prototype.getItems = function () {
-  return this.arr
-}
-Storage.prototype.addItems = function (item) {
-  this.arr.push(item)
-}
-Storage.prototype.removeItem = function(item) {
-  const indexRemove = this.arr.indexOf(item)
-  if (indexRemove === -1) {
-    alert(`такого ${item} не має`)
-    return 
-  }
-  this.arr.splice(indexRemove,1)
-}
+// const Storage = function (arr) {
+//   this.arr = arr
+// }
+// Storage.prototype.getItems = function () {
+//   return this.arr
+// }
+// Storage.prototype.addItems = function (item) {
+//   this.arr.push(item)
+// }
+// Storage.prototype.removeItem = function(item) {
+//   const indexRemove = this.arr.indexOf(item)
+//   if (indexRemove === -1) {
+//     alert(`такого ${item} не має`)
+//     return
+//   }
+//   this.arr.splice(indexRemove,1)
+// }
 
-const storage = new Storage(["apple", "mango"]);
-console.log(storage);
-storage.addItems("banana")
-storage.removeItem("apple")
-console.log(storage)
+// const storage = new Storage(["apple", "mango"]);
+// console.log(storage);
+// storage.addItems("banana")
+// storage.removeItem("apple")
+// console.log(storage)
+
+//Реалізуйте клас Worker (Працівник), який матиме такі властивості: name (ім'я),
+//surname (прізвище), rate (ставка за день роботи), days (кількість відпрацьованих
+//днів). Також клас повинен мати метод getSalary(), який виводитиме зарплату
+//працівника. Зарплата - це добуток (множення) ставки rate на кількість
+//відпрацьованих днів days. І метод getFullName() - ім'я та прізвище працівника.
+// class Worker {
+//   constructor(name, surname, rate, days) {
+//     this.name = name;
+//     this.surname = surname;
+//     this.rate = rate;
+//     this.days = days;
+//   }
+//   getSalary() {
+//     return this.rate * this.days;
+//   }
+
+//   get getFullName() {
+//     return this.name + ' ' + this.surname;
+//   }
+// }
+// const worker = new Worker('Іван', 'Іванов', 10, 31);
+
+// console.log(worker.name); //Виведе 'Іван'
+// console.log(worker.surname); //Виведе 'Іванов'
+// console.log(worker.getFullName); //Виведе 'Іванов Іван'
+// console.log(worker.rate); //Виведе 10
+// console.log(worker.days); //Виведе 31
+// console.log(worker.getSalary()); //Виведе 310 - тобто 10 * 31
