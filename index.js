@@ -329,3 +329,27 @@
 //   .filter(({ id }) => id > 120)
 //   .reduce((acc, { marks }) => acc + marks, 0);
 // console.log(result);
+
+// (map(), filter(), reduce()) Необхідно вивести загальну кількість студентів із балами
+//більше 50, отриманими після нарахування заохочення до 15 балів.
+//Використовуючи map(), додається заохочення до 15 балів студентам, які набрали менше 50 балів.
+// Потім використовуємо filter() для масиву студентів, що повертається функцією map().
+// Так ми знайдемо всіх студентів із відмітками понад 50.
+// Нарешті ми використовували функцію reduce() для повертаного функцією filter()
+// масиву студентів, щоб повернути суму оцінок.
+let studentRecords = [
+  { name: "John", id: 123, marks: 98 },
+  { name: "Baba", id: 101, marks: 23 },
+  { name: "yaga", id: 200, marks: 45 },
+  { name: "Wick", id: 115, marks: 75 },
+];
+const result = studentRecords.map(student => {
+    if (student.marks < 50) {
+    student.marks += 15
+    }
+return student;
+})
+.filter(({marks}) => marks > 50)
+.reduce((prevMark, {marks}) => prevMark + marks, 0)
+
+console.log(result);
