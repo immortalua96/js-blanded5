@@ -82,6 +82,15 @@ function increase() {
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
+addEventListener('click', (event) => {
+  
+  if (event.target.getAttribute('id') === 'place') {
+    console.log(true);
+
+  } else {
+    alert('Error!')
+  }
+} )
 
 //TODO:==============================================
 /*
