@@ -3,7 +3,12 @@
 Завдання 1
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
-
+const btnShowEl = document.querySelector('#alertButton')
+const inputShowEl = document.querySelector('#alertInput')
+btnShowEl.addEventListener('click', showMe)
+function showMe() {
+ alert(inputShowEl.value.trim()) 
+}
 //TODO:==============================================
 /*
 Завдання 2
