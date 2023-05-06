@@ -3,11 +3,11 @@
 Завдання 1
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
-const btnShowEl = document.querySelector('#alertButton')
-const inputShowEl = document.querySelector('#alertInput')
-btnShowEl.addEventListener('click', showMe)
+const btnShowEl = document.querySelector('#alertButton');
+const inputShowEl = document.querySelector('#alertInput');
+btnShowEl.addEventListener('click', showMe);
 function showMe() {
- alert(inputShowEl.value.trim()) 
+  alert(inputShowEl.value.trim());
 }
 //TODO:==============================================
 /*
@@ -15,6 +15,21 @@ function showMe() {
 Після натискання кнопки "SWAP ME" здійснюється обмін вмістом між двома інпутами.
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
+
+const btnSwapEl = document.querySelector('#swapButton');
+const leftInputEl = document.querySelector('#leftSwapInput');
+const rightInputEl = document.querySelector('#rightSwapInput');
+
+btnSwapEl.addEventListener('click', swapInputText);
+
+function swapInputText() {
+  let leftInputValue = leftInputEl.value;
+
+  let rightInputValue = rightInputEl.value;
+
+  leftInputEl.value = rightInputValue;
+  rightInputEl.value = leftInputValue;
+}
 
 //TODO:==============================================
 /*
@@ -128,4 +143,3 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 // console.log(worker.rate); //Виведе 10
 // console.log(worker.days); //Виведе 31
 // console.log(worker.getSalary()); //Виведе 310 - тобто 10 * 31
-
