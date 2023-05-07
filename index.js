@@ -89,7 +89,21 @@ function increase() {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
+const btn = document.querySelector('#double');
+const listItem = document.querySelectorAll('.listItem');
+console.log(listItem);
 
+function doubleSize() {
+  let double = [];
+  listItem.forEach(el => {
+    // double.push(Number(el.textContent) ** 2);
+    const number = Number(el.textContent ** 2);
+    el.textContent = BigInt(Number(el.textContent ** 2));
+  });
+  console.log(double);
+}
+
+btn.addEventListener('click', doubleSize);
 //TODO:==============================================
 /*
 Завдання 7
